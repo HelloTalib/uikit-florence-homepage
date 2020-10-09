@@ -1,0 +1,246 @@
+.tm-header :not(.uk-sticky-below) > .uk-navbar-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.uk-navbar-nav {
+  & > li {
+    position: relative;
+    & > a {
+      color: #222;
+      font-size: 11px;
+      line-height: 17.85px;
+      letter-spacing: 1.5px;
+      font-family: $base-heading-font-family;
+      font-weight: 500;
+      position: relative;
+      padding: 0px 15px;
+      transition: all 0.1 ease-in-out;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        bottom: 33px;
+        height: 5px;
+        background-color: transparent;
+        transition: 0.24s ease-in-out;
+        transition-property: background-color, border-color, box-shadow, height,
+          right;
+        left: 20px;
+        right: calc(102% - 20px);
+      }
+    }
+    &:hover {
+      a {
+        &:before {
+          right: 14px;
+          background-color: #eadbd4;
+        }
+      }
+    }
+  }
+}
+[class*="uk-navbar-dropdown-bottom"] {
+  margin-top: 0px !important;
+}
+#section-1 {
+  .uk-h6 {
+    font-size: 11px;
+    line-height: 14.3px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .uk-heading-medium {
+    span {
+      font-size: 48.16px;
+      line-height: 62.6px;
+      letter-spacing: -1.25px;
+      margin: 0px 0px -53px;
+      font-weight: 300;
+      font-family: "Tenor Sans", sans-serif;
+      @media screen and (min-width: $breakpoint-medium) {
+        font-size: 64px;
+        line-height: 83.2px;
+      }
+    }
+  }
+}
+.uk-heading-line::after {
+  content: "";
+  display: inline-block;
+  width: calc(10% + 3em);
+  height: 0.3em;
+  background: #eadbd4;
+}
+.uk-heading-line > * {
+  display: block;
+  margin-bottom: -1.1em;
+}
+
+.uk-heading-small {
+  span {
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 300;
+    font-size: 44.8px;
+    line-height: 58.24px;
+    letter-spacing: -1px;
+    margin: 0px 0px -49.28px;
+    @media screen and (min-width: $breakpoint-medium) {
+      font-size: 56px;
+      line-height: 72.8px;
+      margin: 0px 0px -61.6px;
+    }
+  }
+}
+
+.uk-navbar-dropdown-nav {
+  & > li {
+    & > a {
+      color: #333;
+      font-size: 11px;
+      line-height: 17.85px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 0px;
+      font-family: $base-heading-font-family;
+      font-weight: 500;
+      &:hover {
+        color: $global-primary-background;
+      }
+    }
+  }
+}
+.uk-icon-link {
+  color: #222;
+  &:hover {
+    color: #999;
+  }
+}
+
+// OFFCANVAS
+.uk-modal {
+  .uk-close {
+    color: #000000;
+    &:hover {
+      color: $global-color;
+    }
+  }
+  .uk-nav-primary {
+    padding: 0px 15px;
+    li {
+      a {
+        color: $global-color;
+        font-size: 34px;
+        line-height: 55.25px;
+        letter-spacing: -0.5px;
+        padding: 8px 0px;
+        font-family: "Tenor Sans", sans-serif;
+        font-weight: 300;
+        &:hover {
+          color: $global-primary-background;
+        }
+      }
+    }
+    .uk-nav-sub {
+      a {
+        color: $global-color;
+        font-size: 16px;
+        letter-spacing: 26px;
+        letter-spacing: -0.5px;
+        padding: 2px 0px;
+        &:hover {
+          color: $global-primary-background;
+        }
+      }
+    }
+  }
+}
+
+.uk-button-default {
+  background-color: transparent;
+  border: transparent;
+  color: #333;
+  background-image: linear-gradient(
+    90deg,
+    rgba(34, 34, 34, 0.05) 35%,
+    transparent 35%
+  );
+  &:hover {
+    background-color: transparent;
+    color: #222;
+    background-image: linear-gradient(
+      90deg,
+      rgba(34, 34, 34, 0.05) 100%,
+      transparent 100%
+    );
+    border: transparent;
+  }
+}
+#section-5 {
+  .uk-text-meta {
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 15.4px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-family: $base-heading-font-family;
+  }
+  .uk-link-reset {
+    font-family: "Tenor Sans", sans-serif;
+    font-size: 40.32px;
+    line-height: 52.4px;
+    letter-spacing: -0.5px;
+    font-weight: 300;
+    @media screen and (min-width: $breakpoint-medium) {
+      font-size: 48px;
+      line-height: 62.4px;
+    }
+  }
+  .uk-text-primary {
+    font-size: 12px;
+    line-height: 15.6px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: $base-heading-font-family;
+  }
+}
+#section-6 {
+  .uk-h5 {
+    font-size: 12px;
+    line-height: 15.6px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-family: $base-heading-font-family;
+    text-transform: uppercase;
+  }
+  .uk-input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #555;
+    &:focus {
+      background: #f5f5f5;
+      outline: none;
+    }
+  }
+}
+footer {
+  .uk-text-small {
+    font-size: 11px;
+    line-height: 16.5px;
+    color: #aaaaaa;
+  }
+  .uk-subnav {
+    & li {
+      & a {
+        font-family: $base-heading-font-family !important;
+        color: #333 !important;
+        font-size: 11px !important;
+        line-height: 17.87px !important;
+        letter-spacing: 1.5px !important;
+        font-weight: 500 !important;
+      }
+    }
+  }
+}

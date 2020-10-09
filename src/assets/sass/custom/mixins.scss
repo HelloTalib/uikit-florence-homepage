@@ -1,0 +1,29 @@
+@mixin hook-button-text() {
+  position: relative;
+  font-size: 13px;
+  line-height: 21.125px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-family: $base-heading-font-family;
+  //   text-transform: capitalize;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    height: 5px;
+    right: calc(100% - 10px);
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@mixin hook-button-text-hover() {
+  &::before {
+    right: 0px;
+    background-color: #eadbd4;
+  }
+  //   color: $global-primary-background;
+}
